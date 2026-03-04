@@ -6,7 +6,7 @@ import { AuthResponse, User } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private readonly API = 'http://localhost:5001/api';
+  private readonly API = 'https://insureflow-backend.onrender.com/api';
   currentUser = signal<User | null>(this.loadUser());
   token = signal<string | null>(sessionStorage.getItem('if_token'));
 
